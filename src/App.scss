@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 
 .container {
@@ -13,8 +14,8 @@
   justify-content: center;
   color: white;
   .main-container {
-    width: 800px;
-    height: 400px;
+    width: 60vw;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -26,7 +27,6 @@
       width: 100%;
       height: 100%;
       display: flex;
-      //   background-color: lightgreen;
       flex-direction: row;
       .y-axis {
         display: flex;
@@ -34,8 +34,6 @@
         align-items: center;
         justify-content: flex-end;
         height: calc(100% - 50px);
-        // gap: 10px;
-        // background-color: rgb(40, 123, 195);
         .text-data {
           //   background-color: green;
           height: 100%;
@@ -62,8 +60,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 30px;
-        // background-color: green;
+        gap: 20px;
         .bar-chart {
           width: 100%;
           height: calc(100% - 50px);
@@ -72,9 +69,8 @@
           align-items: end;
           padding: 0px 10px;
           gap: 10px;
-          //   background-color: lightcoral;
-          border-left: 1px solid white;
-          border-bottom: 1px solid white;
+          border-left: 2px solid white;
+          border-bottom: 2px solid white;
           .bar {
             flex: 1;
             height: calc(100% + 18px);
@@ -83,17 +79,19 @@
             align-items: center;
             justify-content: flex-end;
             .bar-inner {
-              background-color: transparent;
-              border: 1px solid white;
+              background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhC9851qEB37-mIJfPACy83PE76KYusH5fxQ&s");
+              border: 2px solid white;
+              // border-bottom: none;
               border-radius: 5px;
-              width: 100%;
+              width: 60%;
               position: relative;
               display: flex;
               align-items: center;
               justify-content: center;
-              top: 18px;
+              top: 21px;
               font-size: 12px;
               font-weight: 500;
+              transition: height 2s;
             }
             .bar-name {
               position: relative;
@@ -101,6 +99,22 @@
             }
           }
         }
+      }
+    }
+    .regenrate {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      .r-btn {
+        width: 100px;
+        padding: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(42, 80, 42);
+        border: 2px solid rgb(42, 80, 42);
+        border-radius: 5px;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhC9851qEB37-mIJfPACy83PE76KYusH5fxQ&s");
+        cursor: pointer;
       }
     }
   }

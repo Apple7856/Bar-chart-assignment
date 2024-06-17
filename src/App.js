@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BarChart from "./BarChart";
 import "./App.scss";
 
 const App = () => {
-  const data = [
-    { name: 1, value: 33 },
-    { name: 2, value: 45 },
-    { name: 3, value: 8 },
-    { name: 4, value: 60 },
-    { name: 5, value: 50 },
-    { name: 6, value: 75 },
-  ];
+  const [data, setData] = useState([]);
   const maxValue = 100;
 
   const yAxisData = [10, 20, 30, 40, 50];
+
+  const handleClick = () => {
+    const newData = [
+      { name: 1, value: Math.trunc(Math.random() * 100) },
+      { name: 2, value: Math.trunc(Math.random() * 100) },
+      { name: 3, value: Math.trunc(Math.random() * 100) },
+      { name: 4, value: Math.trunc(Math.random() * 100) },
+      { name: 5, value: Math.trunc(Math.random() * 100) },
+    ];
+    setData(newData);
+  };
+
+  useEffect(() => {
+    handleClick();
+  }, []);
 
   return (
     <div className="container">
@@ -26,6 +34,11 @@ const App = () => {
           yAxisName={"No. of ratings"}
           xAxisName={"Rating"}
         />
+        <div className="regenrate">
+          <button onClick={handleClick} className="r-btn">
+            Regenrate
+          </button>
+        </div>
       </div>
     </div>
   );

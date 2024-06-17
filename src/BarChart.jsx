@@ -21,7 +21,7 @@ const BarChart = ({ data, maxValue, yAxisData, yAxisName, xAxisName }) => {
                 className="bar-inner"
                 style={{ height: `${(item.value / maxValue) * 100}%` }}
               >
-                <span className="bar-label">{item.value}%</span>
+                {/* <span className="bar-label">{item.value}%</span> */}
               </div>
               <div className="bar-name">{item.name}</div>
             </div>
